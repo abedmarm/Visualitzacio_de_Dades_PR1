@@ -108,13 +108,13 @@ Netejar i homogeneïtzar les dades categòriques
 
 Generar box plots i hisotgràmes per detectar outliers.
 
-![Alt Text](plots/bplt1.png)
+![Alt Text](plots/bplt1.png){ width=50% }
 
-![Alt Text](plots/hist1.png)
+![Alt Text](plots/hist1.png){ width=50% }
 
-![Alt Text](plots/bplt2.png)
+![Alt Text](plots/bplt2.png){ width=50% }
 
-![Alt Text](plots/bplt3.png)
+![Alt Text](plots/bplt3.png){ width=50% }
 
 </div>
 
@@ -211,10 +211,3 @@ Combinar les dades dels diferents dataframes
 Per processar i netejar les dades dels dataframes restants (By state, by major city, by city) podríem seguir un process com el que s’ha dut a terme aquí.
 
 </div>
-
-</div>
-
-</div>
-
-<script>// add bootstrap table styles to pandoc tables function bootstrapStylePandocTables() { $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed'); } $(document).ready(function () { bootstrapStylePandocTables(); });</script> <script>$(document).ready(function () { window.buildTabsets("TOC"); }); $(document).ready(function () { $('.tabset-dropdown > .nav-tabs > li').click(function () { $(this).parent().toggleClass('nav-tabs-open'); }); });</script> <script>(function () { var script = document.createElement("script"); script.type = "text/javascript"; script.src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"; document.getElementsByTagName("head")[0].appendChild(script); })();</script>
-// add bootstrap table styles to pandoc tables function bootstrapStylePandocTables() { $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed'); } $(document).ready(function () { bootstrapStylePandocTables(); }); $(document).ready(function () { window.buildTabsets("TOC"); }); $(document).ready(function () { $('.tabset-dropdown > .nav-tabs > li').click(function () { $(this).parent().toggleClass('nav-tabs-open'); }); }); (function () { var script = document.createElement("script"); script.type = "text/javascript"; script.src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML\_HTMLorMML"; document.getElementsByTagName("head")\[0\].appendChild(script); })();
