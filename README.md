@@ -1,10 +1,8 @@
-# Visualitzacio_de_Dades_PR1
-
 <div class="container-fluid main-container">
 
 <div id="header">
 
-# PR1 data visualization
+# Visualitzacio de Dades PR1 - Processat
 
 #### Àlex Bedmar Martínez
 
