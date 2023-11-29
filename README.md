@@ -108,9 +108,12 @@ Netejar i homogeneïtzar les dades categòriques
 
 Generar box plots i hisotgràmes per detectar outliers.
 
-![Alt Text](plots/bplt1.png | width=100)
+<img src="https://plots/bplt1.png" width="100" height="100">
+<img src='plots/bplt1.png' width='25'>
+
+![Alt Text](plots/bplt1.png)
 <br/><br/>
-![Alt Text](plots/hist1.png =20x20)
+![Alt Text](plots/hist1.png)
 <br/><br/>
 ![Alt Text](plots/bplt2.png)
 <br/><br/>
