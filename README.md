@@ -115,6 +115,7 @@ Generar box plots i hisotgràmes per detectar outliers.
 ![Alt Text](plots/bplt2.png){ width=50% }
 
 ![Alt Text](plots/bplt3.png){ width=50% }
+<img src="plots/bplt3.png" alt="Alt Text" width="200" height="125">
 
 </div>
 
