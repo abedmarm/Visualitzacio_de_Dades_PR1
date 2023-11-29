@@ -1,0 +1,108 @@
+---
+title: "PR1 data visualization"
+author: "Àlex Bedmar Martínez"
+date: "29/11/2023"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Climate Change: Earth Surface Temperature Data
+
+El conjunt de dades sobre el canvi climàtic ofereix una visió global de les tendències de la temperatura des de 1750, permetent l'exploració a diversos nivells. Amb més de 1.600 milions de registres, combina dades quantitatives i categòriques, proporcionant una perspectiva completa de les temperatures globals i locals.
+
+En aquest document farem una inspecció de les dades per detectar possibles necessitats més endavant.
+
+
+```{r df1}
+setwd('/Users/alexb/OneDrive/Escritorio/UOC/(VD) Visualització de dades/PR1/')
+
+df1 <- read.csv(file = "GlobalLandTemperaturesByCountry.csv", header = T)
+head(df1)
+
+df2 <- read.csv(file = "GlobalTemperatures.csv", header = T)
+head(df2)
+```
+
+## Tractar els valors perduts
+
+Suprimir les columnes amb valors que falten excessius:
+
+```{r}
+
+cat("Dimensions of 'By country' df before filtering:", dim(df1), "\n")
+df1 <- df1[complete.cases(df1), ]
+cat("Dimensions of 'By country' df after filtering:", dim(df1), "\n")
+
+
+cat("Dimensions of 'Global temperatures' df before filtering:", dim(df2), "\n")
+df2 <- df2[complete.cases(df2), ]
+cat("Dimensions of 'Global temperatures' df after filtering:", dim(df2), "\n")
+```
+
+
+
+## Homogeneïtzar dades categòriques
+
+Netejar i homogeneïtzar les dades categòriques
+
+```{r}
+df1$Country <- tolower(df1$Country)
+```
+
+
+
+## Detectar valors extrems en dades numèriques
+
+Generar box plots i hisotgràmes per detectar outliers.
+
+```{r pressure, echo=FALSE}
+boxplot(df1$AverageTemperature, main="Boxplot of Average Temperature")
+hist(df1$AverageTemperature, main="Histogram of Average Temperature", xlab="Average Temperature")
+
+boxplot(df2$LandAndOceanAverageTemperature, main="Boxplot of Land and Ocean Average Temperature")
+boxplot(df2$LandAndOceanAverageTemperatureUncertainty, main="Boxplot of Land and Ocean Average Temperature Uncertainty")
+
+```
+
+
+
+## Extracció de característiques
+
+Extreure l'any i el mes de la columna "dt".
+
+```{r}
+df1$Year <- format(as.Date(df1$dt), "%Y")
+df1$Month <- format(as.Date(df1$dt), "%m")
+
+df2$Year <- format(as.Date(df2$dt), "%Y")
+df2$Month <- format(as.Date(df2$dt), "%m")
+
+cat("Minimum Year of 'By country' df:", min(df1$Year), "\n")
+cat("Maximum Year of 'By country' df:", max(df1$Year), "\n")
+
+cat("Minimum Year of 'Global temperatures' df:", min(df2$Year), "\n")
+cat("Maximum Year of 'Global temperatures' df:", max(df2$Year), "\n")
+```
+
+
+
+## Combinar-ho amb altres conjunts de dades
+
+Combinar les dades dels diferents dataframes
+
+```{r}
+merged_df <- merge(df1, df2, by="dt", all=TRUE)
+head(merged_df)
+dim(merged_df)
+```
+
+#### Pre-processar la resta de les dades
+Per processar i netejar les dades dels dataframes restants (By state, by major city, by city) podríem seguir un process com el que s'ha dut a terme aquí.
+
+
+
+
+
