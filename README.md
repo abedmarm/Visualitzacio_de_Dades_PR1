@@ -109,13 +109,13 @@ Netejar i homogeneïtzar les dades categòriques
 Generar box plots i hisotgràmes per detectar outliers.
 
 ![Alt Text](plots/bplt1.png)
-<br><\br>
+<br/><br/>
 ![Alt Text](plots/hist1.png)
-<br><\br>
+<br/><br/>
 ![Alt Text](plots/bplt2.png)
-<br><\br>
+<br/><br/>
 ![Alt Text](plots/bplt3.png)
-<br><\br>
+<br/><br/>
 
 </div>
 
@@ -146,6 +146,7 @@ Extreure l’any i el mes de la columna “dt”.
     cat("Maximum Year of 'Global temperatures' df:", max(df2$Year), "\n")
 
     ## Maximum Year of 'Global temperatures' df: 2015
+
 </div>
 
 <div id="combinar-ho-amb-altres-conjunts-de-dades" class="section level2">
