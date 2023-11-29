@@ -110,8 +110,8 @@ Generar box plots i hisotgràmes per detectar outliers.
 
 |||
 |:-------------------------:|:-------------------------:|
-|<img src='plots/bplt1.png' width='300'>  |  <img src='plots/hist1.png' width='300'>|
-|<img src='plots/bplt2.png' width='300'>  |  <img src='plots/bplt3.png' width='300'>|
+|<img src='plots/bplt1.png' width='500'>  |  <img src='plots/hist1.png' width='500'>|
+|<img src='plots/bplt2.png' width='500'>  |  <img src='plots/bplt3.png' width='500'>|
 
 <br/><br/>
 
