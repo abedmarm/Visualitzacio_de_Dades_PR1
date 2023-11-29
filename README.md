@@ -146,7 +146,6 @@ Extreure l’any i el mes de la columna “dt”.
     cat("Maximum Year of 'Global temperatures' df:", max(df2$Year), "\n")
 
     ## Maximum Year of 'Global temperatures' df: 2015
-
 </div>
 
 <div id="combinar-ho-amb-altres-conjunts-de-dades" class="section level2">
